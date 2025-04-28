@@ -4,7 +4,7 @@ function EmailActivity() {
   const [userMessage, setUserMessage] = React.useState("");
 
   const handleSendEmail = () => {
-    const myEmail = "abdunnurporag.bd@yahoo.com"; // <-- your email address here
+    const myEmail = "abdunnurporag@yahoo.com"; // <-- your email address here
     const subject = encodeURIComponent("User Question");
 
     const currentTime = new Date().toLocaleString();
