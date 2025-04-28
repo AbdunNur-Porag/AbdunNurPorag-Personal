@@ -1,0 +1,97 @@
+nullThere are a few issues in your code:
+
+1. **Incorrect method name for array iteration**: 
+   In `ChipContent()`, you're using `Map` with a capital "M", but JavaScript's array method is `map()` (lowercase "m"). The correct code would be:
+
+   ```javascript
+   {allChip.map((everyChip) => (
+     <Chip>
+       <ChipText>{everyChip}</ChipText>
+     </Chip>
+   ))}
+   ```
+
+2. **Missing `<tr>` and `<td>` for `tableContent`**: 
+   You're using `<tr>` and `<td>` elements in your table, but they should be wrapped inside a `<tbody>` (which is missing). The code should look like:
+
+   ```jsx
+   <table>
+     <tbody>
+       <tr>
+         <td>
+           <button className="responsive vertical transparent no-round ripple">
+             <img src="/img/svg/education-learn-learning-svgrepo-com.svg" className="responsive"/>
+             <span>{tableContent.item_1}</span>
+           </button>
+         </td>
+         <td>
+           <button className="responsive vertical transparent no-round ripple">
+             <img src="/img/svg/chemistry-education-lab-svgrepo-com.svg" className="responsive"/>
+             <span>{tableContent.item_2}</span>
+           </button>
+         </td>
+       </tr>
+       <tr>
+         <td>
+           <button className="responsive vertical transparent no-round ripple">
+             <img src="/img/svg/a-man-doing-research-and-experiments-svgrepo-com.svg" className="responsive"/>
+             <span>{tableContent.item_3}</span>
+           </button>
+         </td>
+         <td>
+           <button className="responsive vertical transparent no-round ripple">
+             <img src="/img/svg/education-learning-31-svgrepo-com.svg" className="responsive"/>
+             <span>{tableContent.item_4}</span>
+           </button>
+         </td>
+       </tr>
+     </tbody>
+   </table>
+   ```
+
+3. **`div` closing tag issue**:
+   In the `TableContent` function, you have an extra closing `</div>` tag after the comment `//this div for flex`, which should be removed. It should look like:
+
+   ```jsx
+   <div style={{ display: 'flex', justifyContent: 'center', minHeight: '100%' }}>
+     <div>
+       <table className="padding" style={{ height: userDevice.height, width: userDevice.width, maxHeight: '400px', maxWidth: '400px', marginTop: '10%', marginRight: '10px' }} border="0">
+         {/* Table rows go here */}
+       </table>
+       <SearchContent />
+     </div>
+   </div>
+   ```
+
+4. **Use of `router.config()`**:
+   It seems like you're trying to use a routing configuration at the end of your code. However, you haven't imported a routing library (e.g., `react-router-dom`), and `router.config()` is not a valid function in a standard React setup. You might want to check if you're using a specific framework for routing and import the necessary routing components. Here's an example with React Router:
+
+   ```javascript
+   import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+   function App() {
+     return (
+       <Router>
+         <Routes>
+           <Route path="/" element={<MainActivity />} />
+         </Routes>
+       </Router>
+     );
+   }
+   ```
+
+5. **Invalid self-closing `<img>` tag**:
+   In JSX, the `<img>` tag should be self-closed. Make sure your `<img />` tags are correctly written, like so:
+
+   ```jsx
+   <img src="/img/svg/education-learn-learning-svgrepo-com.svg" className="responsive" />
+   ```
+
+### Summary of the changes:
+1. Use `.map()` instead of `.Map()`.
+2. Wrap your `<tr>` and `<td>` elements inside a `<tbody>`.
+3. Remove the extra closing `</div>` in `TableContent`.
+4. Ensure that routing is configured properly if you're using React Router.
+5. Self-close `<img />` tags.
+
+Fix these issues and your code should work properly.
