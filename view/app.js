@@ -75,8 +75,8 @@ function Profile() {
         {/* Profile Info */}
         <ProfileItem icon="person" text="Abdun Nur Porag" />
         <ProfileItem icon="work" text="Currently Student" />
-        <ProfileItem icon="laptop" text="Skilled at Javascript, Python, PHP" />
-        <ProfileItem icon="favorite" text="Explore Framework, Build Framework" />
+        
+        <ProfileItem icon="favorite" text="Programing,Travelling, Researching,Fact Finding,Thinking" />
         
         {/* Email Info */}
         <EmailItem icon="email" link="abdunnurporag.bd@gmail.com" text="abdunnurporag.bd@gmail.com" />
@@ -141,8 +141,24 @@ function AboutMoreActivity() {
           <div className="padding "style={{
             color:"white"
           }}>
-            Hello,I am Abdun Nur Porag.Currently  I am a student.I spend my days in various activity.Like wake up early from bed.Then start study afterthat take breakefast.
-            This going on..
+  
+
+Hello, I am Abdun Nur Porag.  
+You might ask me, "What are you doing?" I would say — not much: reading, eating, sometimes trying to create something new or write some code.  
+Life continues in this way. I hope that the darkness brought on by my addiction to programming will fade soon, and I will find a new beginning.  
+
+"I never say what I cannot do; I always speak of what I can."  
+
+Life is simply a combination of years and days.  
+My goal is near.  
+I say to my enemies: wait just a little longer — soon, you and I will be standing on the same line. Then we’ll see how far each of us has truly traveled.
+<nav className="right-align">[Abdun Nur Porag]</nav>
+<nav className="center-align">
+Thank you for reading.
+</nav>
+
+     
+     
             </div>
           </div>
           </div>
@@ -159,6 +175,7 @@ function MainActivity() {
       }}>
         <div style={{
   marginTop:"15%",
+  marginBottom:"15%",
   borderRadius:"20px",
   width: "90%",
   maxWidth: "400px",
